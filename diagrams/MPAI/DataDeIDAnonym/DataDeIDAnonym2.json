@@ -9,7 +9,13 @@
       "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json"
     },
     "request": {
-
+      "type": "object",
+      "properties": {
+        "data": "array",
+        "dataIdentifiers": {
+          "type": "string"
+        }
+      }
     }
   },
   "required": ["subjectID", "tokenType", "token"]
