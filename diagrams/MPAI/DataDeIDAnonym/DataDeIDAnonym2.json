@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json",
+  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/DataDeIDAnonym/DataDeIDAnonym2.json",
   "title": "DataDeIdentificationAndAnonymization",
   "description": "An object that represents a data de-identification and anonymization request",
   "type": "object",
@@ -18,5 +18,5 @@
       }
     }
   },
-  "required": ["subjectID", "tokenType", "token"]
+  "required": ["token", "request"]
 }
