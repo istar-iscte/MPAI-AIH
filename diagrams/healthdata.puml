@@ -1,0 +1,15 @@
+@startjson
+{
+  "timestamp": "2022-12-15 12:38:07.369915",
+  "healthdata_type": "TEMP",
+  "source": "Google Fit",
+  "healthdata": [
+    {
+      "data": "OLNdQOZXkOwcZtGpkNzZfw=="
+    },
+    {
+      "data": "GaznHQvd2ePRNG3gPljOHQ=="
+    }
+  ]
+}
+@endjson

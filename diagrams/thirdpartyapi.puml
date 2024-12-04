@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+actor "Third-Party\nUser" as TPU
+
+(Register Organization) as RO
+(Register User) as RU
+(Authentication) as AUT
+(Select Data) as SD
+(Filter Data) as FD
+(Create License) as CL
+(Download Data) as DD
+
+TPU-->RU
+RU-->RO
+TPU-->AUT
+TPU-->SD
+TPU-->FD
+TPU-->CL
+TPU-->DD
+SD-->AUT
+FD-->AUT
+CL-->AUT
+DD-->AUT
+
+@enduml

@@ -1,0 +1,36 @@
+{
+    "id": "IDENTIFIER",
+    "specific_access_token": {
+    },
+    "contract_data": {
+        "data":[
+            {
+                "data_identifier": "DATA_ID"
+            }, 
+            {
+                "data_identifier": "DATA_ID"
+            }
+        ],
+        "terms": {
+            "start_date": "TIMESTAMP",
+            "end_date": "TIMESTAMP",
+            "licensable_entities": [
+                {
+                    "type": "UNIVERSITY",
+                    "name": "SOMENAME",
+                    "allow": true
+                },
+                {
+                    "type": "UNIVERSITY",
+                    "name": "SOMENAME",
+                    "allow": true
+                },
+                {
+                    "type": "COMPANY",
+                    "name": "SOMENAME",
+                    "allow": false
+                }
+            ]
+        }
+    }
+}

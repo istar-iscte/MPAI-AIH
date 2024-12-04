@@ -1,0 +1,38 @@
+@startuml
+left to right direction
+actor "End-User" as EU
+entity "Devices" as DEV
+entity "Health Apps" as APP
+
+(Start) as S
+(Register User) as RU
+(Register Device) as RD
+(Register App) as RA
+(Import Data) as ID
+(Register\nHealth Data) as RHD
+(Handle Health\nData Access\nRequests) as HHDAR
+(Audit Health\nData Access) as AHDA
+(Store Health\nData) as SHD
+(Authentication) as AUT
+
+EU --> S
+EU --> RU
+EU --> RD
+EU --> RA
+EU --> ID
+EU --> RHD
+EU --> HHDAR
+EU --> AHDA
+S --> RU
+S --> AUT
+
+DEV --> RHD
+DEV ---> ID
+
+APP --> RHD
+APP ---> ID
+
+RHD --> SHD
+
+ID ---> SHD
+@enduml

@@ -1,0 +1,21 @@
+@startjson
+{
+    "id": "IDENTIFIER",
+    "specific_access_token": {
+    },
+    "data": [
+        {
+            "data_entry": {}
+        },
+        {
+            "data_entry": {}
+        },
+        {
+            "data_entry": {}
+        },
+        {
+            "data_entry": {}
+        }
+    ]
+}
+@endjson

@@ -1,0 +1,23 @@
+@startuml
+hide footbox
+title Store Data on the Backend
+
+autonumber "0:"
+
+participant "Data Vault\nApp" as DVA
+database DataVault as DV
+participant "Storage\nServer" as SS
+participant "Authentication\nServer" as AS
+
+DVA->DV: Requests reading of data
+DV->DVA: Type, Timestamp, DV<sub>sk</sub>(Data)
+DVA->DVA: Decrypt DV<sub>sk</sub>(Data)
+DVA->DVA: Encrypt data: S<sub>sk</sub>(C<sub>sk</sub>(Data))
+DVA->SS: Store UUID, Type, Timestamp, S<sub>sk</sub>(C<sub>sk</sub>(Data))
+SS->AS: Validates and authenticates user
+AS->AS: Verifies the user
+AS->SS: User verified
+SS->SS: Store data on the server:\nUUID, Type, Timestamp, S<sub>sk</sub>(C<sub>sk</sub>(Data))
+SS->DVA: Returns result of the data storage
+
+@enduml

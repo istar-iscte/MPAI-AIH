@@ -1,0 +1,9 @@
+@startjson
+{
+    "id": "IDENTIFIER",
+    "token": {
+    },
+    "access_claim": {
+    }
+}
+@endjson

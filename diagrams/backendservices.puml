@@ -1,0 +1,49 @@
+@startuml
+
+actor "End-User" as EU
+actor "Third-Party" as TP
+package "AIM-Health\nBackend Services" as BES {
+    package "Authentication\n Service" as AUS {
+        [Authentication Service]
+        database "Authentication Data" as AUD
+        [Authentication Service]-->AUD
+    }
+    package "Storage\n Service" as STS {
+        [Storage Service]
+        database "Storage Data" as STD
+        [Storage Service]-->STD
+        STS-->AUS
+    }
+    package "License and\nGovernance\nService" as LGS {
+        [License and Governance\nService]
+        database "License and Governance\nData" as LGD
+        [License and Governance\nService]-->LGD
+        LGS-->AUS
+    }
+    package "Auditing\nService" as ADS {
+        [Auditing\nService]
+        database "Auditing\nData" as ADD
+        [Auditing\nService]-->ADD
+        ADS-->AUS
+    }
+    package "De-Identification and\nAnonymization\nService" as DIAS {
+        [De-Identification and\nAnonymization\nService]
+        database "De-Identification and\nAnonymization\nData" as DIAD
+        [De-Identification and\nAnonymization\nService]-->DIAD
+        DIAS-->AUS
+    }
+}
+
+interface "User API" as API
+interface "Third-Party API" as TAPI
+interface "Blockchain and\nDLT" as BDLT
+
+BES <--> API
+BES <--> TAPI
+BES <--> BDLT
+
+EU <-> API
+API<->BES
+TP <-> TAPI
+
+@enduml

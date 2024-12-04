@@ -1,0 +1,7 @@
+@startjson
+{
+    "result_code": "RESULT_CODE_OPERATION",
+    "message": "SOME MESSAGE (OPTIONAL)",
+    "data": {}
+}
+@endjson

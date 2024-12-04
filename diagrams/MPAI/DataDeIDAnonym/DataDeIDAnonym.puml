@@ -1,0 +1,69 @@
+@startjson
+{
+  "id": "IDENTIFIER",
+  "specific_access_token": {
+    },
+  "request": {
+    "data": [
+      {
+        "data_identifier": {}
+      },
+      {
+        "data_identifier": {}
+      },
+      {
+        "data_identifier": {}
+      },
+      {
+        "data_identifier": {}
+      }
+    ],
+    "deid_criteria": [
+      {
+        "criteria": {}
+      },
+      {
+        "criteria": {}
+      },
+      {
+        "criteria": {}
+      },
+      {
+        "criteria": {}
+      }
+    ],
+    "anonym_criteria": [
+      {
+        "criteria": {}
+      },
+      {
+        "criteria": {}
+      },
+      {
+        "criteria": {}
+      },
+      {
+        "criteria": {}
+      }
+    ]
+  },
+  "result": {
+    "result_code": "RESULT_CODE_OPERATION",
+    "message": "SOME MESSAGE (OPTIONAL)",
+    "data_transform": [
+        {
+            "data": {}
+        },
+        {
+            "data": {}
+        },
+        {
+            "data": {}
+        },
+        {
+            "data": {}
+        }
+    ]
+  }
+}
+@endjson

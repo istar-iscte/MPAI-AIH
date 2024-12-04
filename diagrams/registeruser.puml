@@ -1,0 +1,27 @@
+@startuml
+hide footbox
+title New User Registration
+
+autonumber "0:"
+
+actor User
+participant "Data Vault\nApp" as DVA
+database DataVault
+participant "Authentication\nServer" as AS
+
+User->DVA:Launches the app
+DVA->DVA: App requests for account creation
+DVA->User: Requests credentials
+User->DVA: Username + Password
+DVA->DVA: Create a Data Vault storage key\n(DV<sub>sk</sub>) = PBKDF2(Username+Password)
+DVA->DVA: Create UUID for user
+DVA->AS: Register a new user on the back-end system
+DVA->AS: Send UUID of the user
+DVA->DVA: Create global key for backend\nstorage (C<sub>sk</sub> + S<sub>sk</sub>)
+DVA->DVA: Stores C<sub>sk</sub> and S<sub>sk</sub>
+DVA->AS: Sends S<sub>sk</sub>
+AS->AS: Registers a new user\non the systen (UUID, S<sub>sk</sub>)
+AS->DVA: User registered (JWT)
+DVA->DVA: Stores DV<sub>sk</sub>(C<sub>sk</sub>, S<sub>sk</sub>, JWT)
+DVA->User: Result of the registration process
+@enduml

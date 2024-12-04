@@ -1,0 +1,53 @@
+@startuml
+
+interface "HTTPS" as http
+interface "apps" as apps
+interface "devices" as devices
+
+[Apps Connector\nService] as ACS
+[Devices Connector\nService] as DCS
+[Notifications Service] as NS
+
+package "Data Vault App" {
+    [Graphical User\nInterface] as GUI
+    [Communication\nInterface] as CI
+    [Internal Storage] as IS
+    [Data Vault Writer] as DVW
+    [Data Vault Reader] as DVR
+    [Controller] as CTRL
+}
+
+database "SQLite" {
+    frame "Health Data" as HD {
+    }
+}
+
+database "SQLite" as PREF {
+    frame "Preferences" as P {
+    }
+}
+
+cloud {
+    [Backend API] as API
+}
+
+devices-->DCS
+apps-->ACS
+http-->NS
+
+IS--->P
+DVW--->HD
+HD-->DVR
+GUI<->CTRL
+CTRL<-->IS
+CTRL<-->DVW
+CTRL<-->DVR
+CTRL<->CI
+
+DCS--->CTRL
+ACS--->CTRL
+NS--->CTRL
+
+CI<->API
+
+@enduml

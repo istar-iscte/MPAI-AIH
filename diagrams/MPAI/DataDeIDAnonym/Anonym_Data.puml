@@ -1,0 +1,35 @@
+@startjson
+{
+    "id": "IDENTIFIER",
+    "specific_access_token": {
+    },
+    "data": [
+        {
+            "data_identifier": {}
+        },
+        {
+            "data_identifier": {}
+        },
+        {
+            "data_identifier": {}
+        },
+        {
+            "data_identifier": {}
+        }
+    ],
+    "anonym_criteria": [
+        {
+            "criteria": {}
+        },
+        {
+            "criteria": {}
+        },
+        {
+            "criteria": {}
+        },
+        {
+            "criteria": {}
+        }
+    ]
+}
+@endjson

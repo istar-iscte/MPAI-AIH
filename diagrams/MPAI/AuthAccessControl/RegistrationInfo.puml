@@ -1,0 +1,15 @@
+@startjson
+{
+    "registration_info":
+    {
+        "name": "",
+        "organization": "",
+        "address": ""
+    },
+    "type": "",
+    "registration_credentials": {
+        "username": "",
+        "token": ""
+    }
+}
+@endjson

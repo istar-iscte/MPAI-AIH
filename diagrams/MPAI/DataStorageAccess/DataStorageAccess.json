@@ -1,0 +1,45 @@
+{
+  "id": "IDENTIFIER",
+    "specific_access_token": {
+    },
+  "request": {
+    "data_store": [
+        {
+            "data_entry": {}
+        },
+        {
+            "data_entry": {}
+        },
+        {
+            "data_entry": {}
+        },
+        {
+            "data_entry": {}
+        }
+    ],
+    "data_read_criteria": [
+        {
+            "criteria": {}
+        }
+    ]
+  },
+  "result": {
+    "result_code": "RESULT_CODE_OPERATION",
+    "message": "SOME MESSAGE (OPTIONAL)",
+    "id": "IDENTIFIER",
+    "data_read": [
+        {
+            "data_entry": {}
+        },
+        {
+            "data_entry": {}
+        },
+        {
+            "data_entry": {}
+        },
+        {
+            "data_entry": {}
+        }
+    ]
+  }
+}

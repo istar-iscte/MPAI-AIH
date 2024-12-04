@@ -1,0 +1,35 @@
+@startjson
+{
+    "id": "IDENTIFIER",
+    "specific_access_token": {
+    },
+    "contract_data": {
+        "data":[
+            {
+                "data_identifier": "DATA_ID"
+            }, 
+            {
+                "data_identifier": "DATA_ID"
+            }
+        ],
+        "terms": {
+            "start_date": "TIMESTAMP",
+            "end_date": "TIMESTAMP",
+            "entity": {
+                    "type": "UNIVERSITY",
+                    "name": "SOMENAME"
+                },
+            "usage": [
+                {
+                    "usage-type": {},
+                    "allowed": true
+                },
+                {
+                    "usage-type": {},
+                    "allowed": false
+                }
+            ]
+        }
+    }
+}
+@endjson

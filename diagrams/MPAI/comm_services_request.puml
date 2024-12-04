@@ -1,0 +1,9 @@
+@startjson
+{
+    "id": "IDENTIFIER",
+    "data": {},
+    "recipient": {
+        "id": "IDENTIFIER"
+    }
+}
+@endjson

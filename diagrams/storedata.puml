@@ -1,0 +1,27 @@
+@startuml
+hide footbox
+title Store Data on Secure Vault
+
+autonumber "0:"
+
+entity "Health Apps" as HA  
+entity "Connected Sensors" as CS  
+participant "Data Vault\nApp" as DVA
+database DataVault as DV
+
+DVA->HA: Request import of Healthdata
+HA->DVA: Healthdata in specific format
+DVA->DVA: Prepare data with\nType, Timestamp, Data
+DVA->DVA: Encrypt Data: DV<sub>sk</sub>(Data)
+DVA->DV: Store Type, Timestamp, DV<sub>sk</sub>(Data)
+DV->DVA: Result of secure storage
+
+
+DVA->CS: Request data
+CS->DVA: Healthdata in specific format
+DVA->DVA: Prepare data with\nType, Timestamp, Data
+DVA->DVA: Encrypt Data: DV<sub>sk</sub>(Data)
+DVA->DV: Store Type, Timestamp, DV<sub>sk</sub>(Data)
+DV->DVA: Result of secure storage
+
+@enduml
