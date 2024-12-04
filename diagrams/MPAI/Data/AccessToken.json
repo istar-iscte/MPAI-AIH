@@ -1,17 +1,23 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/DataDeIDAnonym/AccessToken.json",
+  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json",
   "title": "AccessToken",
+  "description": "An object that represents an authentication token to be used on the system",
   "type": "object",
   "properties": {
-    "Header": {
+    "subjectID": {
+      "description": "The unique identification of the subject that holds the token",
       "type": "string"
     },
-    "MInstanceID": {
+    "tokenType": {
+      "description": "The type of token the user is passing",
       "type": "string"
     },
-    "AccessToken": {
-      "$ref": ""
+    "token": {
+      "description": "The value of the token, formatted in base64",
+      "string": "string",
+      "contentEncoding": "base64"
     }
-  }
+  },
+  "required": ["subjectID", "tokenType", "token"]
 }
