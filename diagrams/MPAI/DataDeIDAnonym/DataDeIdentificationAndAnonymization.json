@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/DataDeIDAnonym/DataDeIdentificationAndAnonymization.json",
+  "title": "DataDeIdentificationAndAnonymization",
+  "description": "An object that represents a data de-identification and anonymization request",
+  "type": "object",
+  "properties": {
+    "token": {
+      "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json"
+    },
+    "request": {
+      "type": "object",
+      "description": "This is the request to be performed to anonymize or de-identify the data",
+      "properties": {
+        "data": {
+          "type": "array",
+          "description": "Data object to anonymize or de-identify",
+          "dataItem": {
+            "type": "object",
+            "properties": {
+              "dataId": {
+                "type": "string"
+              },
+              "action": {
+                "type": "string"
+              },
+              "deIdCriteria": {
+                "$ref": ""
+              },
+              "anonymCriteria": {
+                "$ref": ""
+              }
+            }
+          }
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "resultCode": {
+          "$ref": ""
+        },
+        "resultMessage": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "dataId": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": ["token", "request"]
+}
