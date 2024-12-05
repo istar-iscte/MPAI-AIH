@@ -1,0 +1,37 @@
+{
+    "token": {
+        "subjectID": "1234567890",
+        "tokenType": "Bearer",
+        "token": "1234567890"
+    },
+    "request": {
+        "data": [
+            {
+                "dataId": "1234567890",
+                "action": "DEIDENTIFY",
+                "deIdCriteria": {
+                    "criteria": "1234567890"
+                }
+            },
+            {
+                "dataId": "1234567890",
+                "action": "ANONYMIZE",
+                "anonymCriteria": {
+                    "criteria": "1234567890"
+                }
+            }
+        ]
+    },
+    "result": {
+        "resultCode": "1234567890",
+        "resultMessage": "1234567890",
+        "data": [
+            {
+                "dataId": "1234567890"
+            },
+            {
+                "dataId": "1234567890"
+            }
+        ]
+    }
+}
