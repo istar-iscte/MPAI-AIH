@@ -19,16 +19,20 @@
             "type": "object",
             "properties": {
               "dataId": {
-                "type": "string"
+                "type": "string",
+                "description": "The unique identification of the data on the system"
               },
               "action": {
-                "type": "string"
+                "type": "string",
+                "description": "The action to be performed on the data item - either anonymization or de-identification"
               },
               "deIdCriteria": {
-                "$ref": ""
+                "$ref": "",
+                "description": "De-identification criteria to apply to this data item"
               },
               "anonymCriteria": {
-                "$ref": ""
+                "$ref": "",
+                "description": "Anonymization criteria to apply to this data item"
               }
             }
           }
@@ -39,15 +43,23 @@
       "type": "object",
       "properties": {
         "resultCode": {
-          "$ref": ""
+          "$ref": "",
+          "description": "Some internal code that represents the result of the request"
         },
         "resultMessage": {
-          "type": "string"
+          "type": "string",
+          "description": "The message resulting from the request"
         },
         "data": {
           "type": "array",
-          "dataId": {
-            "type": "string"
+          "dataItem": {
+            "type": "object",
+            "properties": {
+              "dataId": {
+                "type": "string",
+                "description": "The unique identification of the data anonymized of de-identified"
+              }
+            }
           }
         }
       }
