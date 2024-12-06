@@ -1,0 +1,73 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/AuthAccessControl/RegistrationRequest.json",
+    "title": "RegistrationRequest",
+    "description": "An object that represents a registration request",
+    "type": "object",
+    "properties": {
+        "request": {
+            "type": "object",
+            "description": "The request to be performed to register",
+            "properties": {
+                "registrationInfo": {
+                    "type": "object",
+                    "description": "The information about the registration",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the registration"
+                        },
+                        "organization": {
+                            "type": "string",
+                            "description": "The organization of the registration"
+                        },
+                        "address": {
+                            "type": "string",
+                            "description": "The address of the registration"
+                        }   
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "description": "The type of registration"
+                },
+                "registrationCredentials": {
+                    "type": "object",
+                    "description": "The credentials of the registration",
+                    "properties": {
+                        "username": {
+                            "type": "string",
+                            "description": "The username of the registration"
+                        },
+                        "token": {
+                            "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json",
+                            "description": "The token of the registration"
+                        }
+                    }
+                }        
+            }
+        },
+        "result": {
+            "type": "object",
+            "description": "The result of the registration",
+            "properties": {
+                "resultCode": {
+                    "type": "string",
+                    "description": "The code of the result"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "The message of the result"
+                },
+                "id": {
+                    "type": "string",
+                    "description": "The identifier of the registration"
+                },
+                "token": {
+                    "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json",
+                    "description": "The token of the registration"
+                }
+            }
+        }
+    }
+}

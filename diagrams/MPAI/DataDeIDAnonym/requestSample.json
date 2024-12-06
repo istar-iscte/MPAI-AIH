@@ -10,14 +10,18 @@
                 "dataId": "1234567890",
                 "action": "DEIDENTIFY",
                 "deIdCriteria": {
-                    "criteria": "1234567890"
+                    "criteria": "1234567890",
+                    "deIdentificationType": "1234567890",
+                    "deIdentificationValue": "1234567890"
                 }
             },
             {
                 "dataId": "1234567890",
                 "action": "ANONYMIZE",
                 "anonymCriteria": {
-                    "criteria": "1234567890"
+                    "criteria": "1234567890",
+                    "anonymizationType": "1234567890",
+                    "anonymizationValue": "1234567890"
                 }
             }
         ]

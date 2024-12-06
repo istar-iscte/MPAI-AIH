@@ -5,6 +5,18 @@
   "description": "An object that represents the anonymization criteria",
   "type": "object",
   "properties": {
+    "criteria": {
+      "type": "string",
+      "description": "The criteria to be applied to the anonymization"
+    },
+    "anonymizationType": {
+      "type": "string",
+      "description": "The type of anonymization to be applied"
+    },
+    "anonymizationValue": {
+      "type": "string",
+      "description": "The value to be applied to the anonymization"
+    }
   },
-  "required": ["subjectID", "tokenType", "token"]
+  "required": ["criteria", "anonymizationType", "anonymizationValue"]
 }

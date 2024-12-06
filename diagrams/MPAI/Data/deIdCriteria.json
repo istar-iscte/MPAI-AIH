@@ -5,6 +5,18 @@
   "description": "An object that represents the de-identification criteria",
   "type": "object",
   "properties": {
+    "criteria": {
+      "type": "string",
+      "description": "The criteria to be applied to the de-identification"
+    },
+    "deIdentificationType": {
+      "type": "string",
+      "description": "The type of de-identification to be applied"
+    },
+    "deIdentificationValue": {
+      "type": "string",
+      "description": "The value to be applied to the de-identification"
+    }
   },
-  "required": ["subjectID", "tokenType", "token"]
+  "required": ["criteria", "deIdentificationType", "deIdentificationValue"]
 }

@@ -27,11 +27,11 @@
                 "description": "The action to be performed on the data item - either anonymization [ANONYMIZE] or de-identification [DEIDENTIFY]"
               },
               "deIdCriteria": {
-                "$ref": "",
+                "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/deIdCriteria.json",
                 "description": "De-identification criteria to apply to this data item"
               },
               "anonymCriteria": {
-                "$ref": "",
+                "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/anonymCriteria.json",
                 "description": "Anonymization criteria to apply to this data item"
               }
             }
@@ -43,7 +43,7 @@
       "type": "object",
       "properties": {
         "resultCode": {
-          "$ref": "",
+          "type": "string",
           "description": "Some internal code that represents the result of the request"
         },
         "resultMessage": {
