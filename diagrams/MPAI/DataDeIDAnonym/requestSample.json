@@ -1,10 +1,10 @@
 {
-    "token": {
-        "subjectID": "1234567890",
-        "tokenType": "Bearer",
-        "token": "1234567890"
-    },
     "request": {
+        "token": {
+            "subjectID": "1234567890",
+            "tokenType": "Bearer",
+            "token": "1234567890"
+        },
         "data": [
             {
                 "dataId": "1234567890",

@@ -1,0 +1,19 @@
+{
+  "request": {
+    "accessInfo": {
+      "subjectid": "1234567890",
+      "token": {
+        "access_token": "1234567890"
+      },
+      "accessClaim": "access"
+    }
+  },
+  "result": {
+    "resultCode": "200",
+    "message": "Access granted",
+    "id": "1234567890",
+    "token": {
+      "access_token": "1234567890"
+    }
+  }
+}

@@ -5,13 +5,13 @@
   "description": "An object that represents a data de-identification and anonymization request",
   "type": "object",
   "properties": {
-    "token": {
-      "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json"
-    },
     "request": {
       "type": "object",
       "description": "This is the request to be performed to anonymize or de-identify the data",
       "properties": {
+        "token": {
+          "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json"
+        },
         "data": {
           "type": "array",
           "description": "Data object to anonymize or de-identify",

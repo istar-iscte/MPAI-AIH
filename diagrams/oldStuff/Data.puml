@@ -2,18 +2,18 @@
 {
     "result_code": "RESULT_CODE_OPERATION",
     "message": "SOME MESSAGE (OPTIONAL)",
-    "data_transform": [
+    "data_read": [
         {
-            "data": {}
+            "data_entry": {}
         },
         {
-            "data": {}
+            "data_entry": {}
         },
         {
-            "data": {}
+            "data_entry": {}
         },
         {
-            "data": {}
+            "data_entry": {}
         }
     ]
 }

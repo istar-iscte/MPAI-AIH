@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/DataStorageAccess/DataStorageRequest.json",
+  "title": "DataStorageRequest",
+  "description": "An object that represents a data storage access request",
+  "type": "object",
+  "properties": {
+    "request": {
+      "type": "object",
+      "description": "This is the request to be performed to anonymize or de-identify the data",
+      "properties": {
+        "request": {
+          "type": "object",
+          "description": "This is the request to be performed to access the data",
+          "properties": {
+            "token": {
+              "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json"
+            },
+            "data": {
+              "type": "array",
+              "description": "Data object to store",
+              "dataItem": {
+                "type": "object",
+                "description": "Data object to store"
+              }
+            }
+          }
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "description": "This is the result of the request",
+      "properties": {
+        "result_code": {
+          "type": "string",
+          "description": "The result code of the request"
+        },
+        "message": {
+          "type": "string",
+          "description": "The message of the request"
+        }, 
+        "dataId": {
+          "type": "string",
+          "description": "The identifier of the data"
+        }
+      }
+    }
+  },
+  "required": ["request"]
+}
