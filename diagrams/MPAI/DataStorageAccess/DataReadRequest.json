@@ -2,26 +2,22 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/DataStorageAccess/DataStorageRequest.json",
   "title": "DataStorageRequest",
-  "description": "An object that represents a data storage access request",
+  "description": "An object that represents a data read access request",
   "type": "object",
   "properties": {
     "request": {
       "type": "object",
-      "description": "This is the request to be performed to store data",
+      "description": "This is the request to be performed to read data",
       "properties": {
         "type": "object",
-        "description": "This is the request to be performed to access the data",
+        "description": "This is the request to be performed to read the data",
         "properties": {
           "token": {
             "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json"
           },
-          "data": {
-            "type": "array",
-            "description": "Data object to store",
-            "dataItem": {
-              "type": "object",
-              "description": "Data object to store"
-            }
+          "criteria": {
+            "type": "string",
+            "description": "The criteria to read the data!"
           }
         }
       }
@@ -38,9 +34,17 @@
           "type": "string",
           "description": "The message of the request"
         }, 
-        "dataId": {
-          "type": "string",
-          "description": "The identifier of the data"
+        "data": {
+          "type": "array",
+          "dataItem": {
+            "type": "object",
+            "properties": {
+              "dataId": {
+                "type": "string",
+                "description": "The unique identification of the data anonymized of de-identified"
+              }
+            }
+          }
         }
       }
     }
