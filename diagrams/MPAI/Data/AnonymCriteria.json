@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json",
-  "title": "anonymCriteria",
+  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AnonymCriteria.json",
+  "title": "AnonymCriteria",
   "description": "An object that represents the anonymization criteria",
   "type": "object",
   "properties": {

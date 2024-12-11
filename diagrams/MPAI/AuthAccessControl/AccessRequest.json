@@ -13,7 +13,7 @@
                     "type": "object",
                     "description": "The information about the access",
                     "properties": {
-                        "subjectid": {
+                        "subjectId": {
                             "type": "string",
                             "description": "The identification of the subject"
                         },

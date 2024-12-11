@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json",
-  "title": "deIdCriteria",
+  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/DeIdCriteria.json",
+  "title": "DeIdCriteria",
   "description": "An object that represents the de-identification criteria",
   "type": "object",
   "properties": {

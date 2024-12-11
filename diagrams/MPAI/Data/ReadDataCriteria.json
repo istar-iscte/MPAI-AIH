@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/ReadDataCriteria.json",
+  "title": "ReadDataCriteria",
+  "description": "An object that represents criteria to select data on the system",
+  "type": "object",
+  "properties": {
+  },
+  "required": []
+}
