@@ -5,6 +5,9 @@
   "description": "An object that represents criteria to select data on the system",
   "type": "object",
   "properties": {
+    "query": {
+      "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/QueryData.json"
+    }
   },
   "required": []
 }

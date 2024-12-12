@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/QueryData.json",
+  "title": "QueryData",
+  "description": "An object that represents a query to select data from the system",
+  "type": "object",
+  "properties": {
+    "type": "object",
+    "properties": {
+      "select": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "from": {
+        "type": "string"
+      },
+      "where": {
+        "type": "object",
+        "properties": {
+          "and": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "field": { "type": "string" },
+                    "operator": { "type": "string" },
+                    "value": {} // Adjust the type based on expected values
+                  },
+                  "required": ["field", "operator", "value"]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "or": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "field": { "type": "string" },
+                          "operator": { "type": "string" },
+                          "value": {} // Adjust the type based on expected values
+                        },
+                        "required": ["field", "operator", "value"]
+                      }
+                    }
+                  },
+                  "required": ["or"]
+                }
+              ]
+            }
+          }
+        },
+        "required": ["and"]
+      },
+      "required": ["select", "from", "where"]
+    }
+  },
+  "required": []
+}

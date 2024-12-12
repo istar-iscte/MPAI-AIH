@@ -11,7 +11,8 @@
     },
     "tokenType": {
       "description": "The type of token the user is passing",
-      "type": "string"
+      "type": "string",
+      "enum": ["LoginAndPassword", "OpenId", "OAuth", "JWT"]
     },
     "token": {
       "description": "The value of the token, formatted in base64",
