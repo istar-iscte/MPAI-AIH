@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/DataStorageAccess/ContractCreationRequest.json",
+  "title": "ContractCreationRequest",
+  "description": "An object that represents a contract creation request, either a user or usage contract",
+  "type": "object",
+  "properties": {
+    "request": {
+      "type": "object",
+      "description": "This is the request to be performed to create contracts",
+      "properties": {
+        "type": "object",
+        "description": "This is the request to be performed to read the data",
+        "properties": {
+          "token": {
+            "$ref": "https://raw.githubusercontent.com/istar-iscte/MPAI-AIH/refs/heads/main/diagrams/MPAI/Data/AccessToken.json"
+          },
+          "contractData": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "array",
+                "dataItem": {
+                  "type": "object",
+                  "properties": {
+                    "dataId": {
+                      "type": "string",
+                      "description": "The unique identification of the data anonymized of de-identified"
+                    }
+                  }
+                }
+              },
+              "terms": {
+                "type": "object",
+                "properties":{
+                  "startDateAndTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "endDateAndTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "licensableEntities": {
+                  "type": "array",
+                  "entity": {
+                    "type": "object",
+                    "properties": {
+                      "entityId": {
+                        "type": "string"
+                      },
+                      "entityType": {
+                        "type": "string"
+                      },
+                      "entityName": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "description": "This is the result of the request",
+      "properties": {
+        "result_code": {
+          "type": "string",
+          "description": "The result code of the request"
+        },
+        "message": {
+          "type": "string",
+          "description": "The message of the request"
+        }, 
+        "data": {
+          "type": "array",
+          "dataItem": {
+            "type": "object",
+            "properties": {
+              "dataId": {
+                "type": "string",
+                "description": "The unique identification of the data anonymized of de-identified"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["request"]
+}
